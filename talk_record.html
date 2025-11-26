@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arena 完美终极版 V11.0</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <style>
+        /* --- 基础样式 --- */
+        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f4f6f8; color: #333; padding-bottom: 100px; }
+        .main-container { max-width: 98%; margin: 20px auto; display: flex; flex-direction: column; gap: 25px; }
+        .box { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #e1e4e8; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 20px; }
+
+        /* --- 导出按钮组 (新功能核心) --- */
+        .export-section {
+            background: #f1f8e9; padding: 15px; border-radius: 8px; border: 1px solid #c5e1a5; margin-bottom: 20px;
+        }
+        .export-buttons { display: flex; gap: 15px; margin-top: 10px; }
+        .btn-exp { flex: 1; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; color: white; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 5px;}
+        .btn-exp-left { background: #1976D2; } .btn-exp-left:hover { background: #1565C0; }
+        .btn-exp-right { background: #7B1FA2; } .btn-exp-right:hover { background: #6A1B9A; }
+        .btn-exp-json { background: #607D8B; } .btn-exp-json:hover { background: #546E7A; }
+
+        /* --- API & 浮窗样式 --- */
+        .api-panel { background: #263238; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: none; }
+        .api-panel.show { display: block; }
+        .api-input { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #546E7A; background: #37474F; color: white; box-sizing: border-box; }
+        .btn-toggle-config { background: #333; color: white; border:none; padding: 8px 20px; border-radius: 20px; cursor: pointer; margin: 0 auto; display: block;}
+        
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; display: none; justify-content: center; align-items: center; }
+        .modal-content { background: white; width: 80%; max-width: 800px; max-height: 80vh; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .modal-body { overflow-y: auto; flex: 1; border: 1px solid #eee; padding: 15px; border-radius: 6px; background: #fafafa; margin: 15px 0; }
+        .modal-footer { display: flex; justify-content: flex-end; gap: 10px; }
+
+        /* --- 双模态输入框 --- */
+        .input-wrapper { position: relative; border: 1px solid #ccc; border-top: none; border-radius: 0 0 6px 6px; background: #fff; }
+        textarea { padding: 15px; border: none; font-family: 'Consolas', monospace; font-size: 15px; line-height: 1.5; box-sizing: border-box; resize: vertical; width: 100%; display: block; outline: none; }
+        .textarea-half { height: 350px; }
+        .preview-layer { padding: 15px; height: 350px; overflow-y: auto; display: none; background: #fff; cursor: text; }
+        .show-preview .preview-layer { display: block; }
+        .show-preview textarea { display: none; }
+
+        /* 工具栏 */
+        .toolbar { display: flex; justify-content: space-between; align-items: center; background: #f5f5f5; padding: 5px 10px; border-radius: 6px 6px 0 0; border: 1px solid #ccc; border-bottom: 1px solid #ddd; }
+        .toolbar-actions { display: flex; gap: 8px; align-items: center; }
+        .btn-icon { border: 1px solid #ccc; background: white; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; display: flex; align-items: center; gap: 4px; transition: all 0.2s; }
+        .btn-icon:hover { background: #e3f2fd; border-color: #2196F3; }
+        .btn-icon.active { background: #2196F3; color: white; border-color: #2196F3; }
+        .btn-magic { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; }
+
+        /* 布局与通用 */
+        .round-container { border: 1px solid #ccc; background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; position: relative; }
+        .round-label { position: absolute; top: -10px; left: 15px; background: #455A64; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .textarea-full { height: 100px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; padding:10px;}
+        .btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+        .record-item { margin-bottom: 30px; border-left: 6px solid #ddd; }
+        .win-Left { border-left-color: #2196F3; } .win-Right { border-left-color: #9C27B0; }
+        .markdown-body { font-size: 14px; line-height: 1.6; }
+        .markdown-body pre { background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        
+        #status { position: fixed; top: 20px; right: 20px; padding: 12px 20px; background: #4CAF50; color: white; border-radius: 4px; display: none; z-index: 999; font-weight: bold;}
+    </style>
+</head>
+<body>
+
+<div id="status"></div>
+
+<!-- 预览浮窗 -->
+<div class="modal-overlay" id="previewModal">
+    <div class="modal-content">
+        <h3 style="margin:0; color:#2196F3;">✨ AI 总结预览</h3>
+        <div class="modal-body markdown-body" id="previewContent"></div>
+        <div class="modal-footer">
+            <button class="btn" style="background:#eee;" onclick="closeModal()">❌ 取消</button>
+            <button class="btn" style="background:#2196F3; color:white;" onclick="confirmSummary()">✅ 采用并显示</button>
+        </div>
+    </div>
+</div>
+
+<div class="main-container">
+    <h1>⚔️ Arena 完美终极版 V11.0</h1>
+    <button class="btn-toggle-config" onclick="document.getElementById('configPanel').classList.toggle('show')">⚙️ 设置 API</button>
+
+    <div class="api-panel" id="configPanel">
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:20px; margin-bottom:15px;">
+            <input type="text" id="apiBase" class="api-input" value="https://api.deepseek.com">
+            <input type="password" id="apiKey" class="api-input" placeholder="sk-...">
+            <input type="text" id="apiModel" class="api-input" value="deepseek-chat">
+        </div>
+        <textarea id="systemPrompt" class="api-input" style="height:80px;">你是一个技术总结专家。请保留核心细节，使用清晰的 Markdown 列表格式，重点词汇加粗，去除废话。</textarea>
+        <div style="margin-top:10px; text-align:right;">
+            <button class="btn" style="background:#4CAF50; color:white;" onclick="saveApiConfig()">💾 保存配置</button>
+        </div>
+    </div>
+
+    <div class="box" id="input-box">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:20px;">
+            <input type="text" id="nameA" style="padding:10px; text-align:center; font-weight:bold; width:100%; border:1px solid #ddd; border-radius:4px;" value="Model A">
+            <input type="text" id="nameB" style="padding:10px; text-align:center; font-weight:bold; width:100%; border:1px solid #ddd; border-radius:4px;" value="Model B">
+        </div>
+
+        <div id="rounds-wrapper"></div>
+
+        <button class="btn" style="background:#673AB7; color:white; width:100%; margin-bottom:20px;" onclick="addRound()">➕ 添加下一轮对话</button>
+
+        <div style="text-align:center; margin:20px 0; background:#f9f9f9; padding:10px; border-radius:8px;">
+            <label style="margin-right:15px;"><input type="radio" name="winner" value="None" checked> ⚪ 暂不评价</label>
+            <label style="margin-right:15px;"><input type="radio" name="winner" value="Left"> 🔵 左边赢</label>
+            <label style="margin-right:15px;"><input type="radio" name="winner" value="Right"> 🟣 右边赢</label>
+            <label style="margin-right:15px;"><input type="radio" name="winner" value="Tie"> 🟠 平局</label>
+        </div>
+        
+        <input type="hidden" id="edit-id" value="">
+        <div style="display:flex; gap:10px;">
+            <button class="btn" style="background:#ddd; flex:1;" onclick="resetForm()">❌ 重置</button>
+            <button class="btn" style="background:#2196F3; color:white; flex:3;" onclick="saveRecord()">💾 保存到库</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>📚 历史记录 (<span id="count">0</span>)</h2>
+        
+        <!-- 导出功能区 (核心更新) -->
+        <div class="export-section">
+            <div style="font-size:14px; font-weight:bold; color:#558B2F; margin-bottom:5px;">📤 数据导出中心</div>
+            <div style="font-size:12px; color:#666;">你可以单独导出某一个模型的全部对话记录（包含提问+该模型的回答），方便做数据集。</div>
+            <div class="export-buttons">
+                <button class="btn-exp btn-exp-left" onclick="exportSplit('Left')">📄 仅导出左边 (Prompt + Model A)</button>
+                <button class="btn-exp btn-exp-right" onclick="exportSplit('Right')">📄 仅导出右边 (Prompt + Model B)</button>
+                <button class="btn-exp btn-exp-json" onclick="exportAllJson()">📦 导出全部备份 (JSON)</button>
+            </div>
+        </div>
+
+        <div id="record-list"></div>
+    </div>
+</div>
+
+<script>
+    // 全局暂存
+    let tempSummary = '', targetId = '', targetReplaceMode = '', targetOriginal = '';
+
+    marked.setOptions({
+        highlight: (code, lang) => {
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            return hljs.highlight(code, { language }).value;
+        }
+    });
+
+    // 注意：这里使用新的存储 Key，避免旧数据冲突
+    let records = JSON.parse(localStorage.getItem('arenaRecordsV11') || '[]');
+
+    window.onload = () => {
+        loadApiConfig();
+        if(document.getElementById('rounds-wrapper').children.length === 0) addRound();
+        renderRecords();
+    };
+
+    // --- 视图切换逻辑 ---
+    function toggleView(uniqueId, mode) {
+        const wrapper = document.getElementById(`wrapper-${uniqueId}`);
+        const textarea = document.getElementById(uniqueId);
+        const preview = document.getElementById(`preview-${uniqueId}`);
+        const btnEdit = document.getElementById(`btn-edit-${uniqueId}`);
+        const btnPreview = document.getElementById(`btn-preview-${uniqueId}`);
+
+        if(mode === 'preview') {
+            const text = textarea.value;
+            preview.innerHTML = !text.trim() ? '<span style="color:#ccc;">(空)</span>' : marked.parse(text);
+            wrapper.classList.add('show-preview');
+            btnPreview.classList.add('active');
+            btnEdit.classList.remove('active');
+        } else {
+            wrapper.classList.remove('show-preview');
+            btnEdit.classList.add('active');
+            btnPreview.classList.remove('active');
+            textarea.focus();
+        }
+    }
+
+    // --- 核心：分轨导出逻辑 (修复版) ---
+    function exportSplit(side) {
+        if (records.length === 0) return alert('还没有记录可以导出');
+        
+        let content = `# 📁 Arena 历史对话导出 - ${side === 'Left' ? '左侧模型' : '右侧模型'}\n\n`;
+        content += `> 导出时间: ${new Date().toLocaleString()}\n\n`;
+
+        records.forEach((r, index) => {
+            const modelName = side === 'Left' ? r.nameA : r.nameB;
+            content += `## Session ${records.length - index}: ${r.time}\n`;
+            content += `**Model Name:** ${modelName}\n\n`;
+
+            r.turns.forEach(turn => {
+                content += `### Round ${turn.round}\n\n`;
+                content += `#### 🗣️ User:\n${turn.prompt}\n\n`;
+                
+                const reply = side === 'Left' ? turn.replyA : turn.replyB;
+                content += `#### 🤖 ${modelName}:\n${reply || '(该轮次未回答)'}\n\n`;
+                content += `---\n\n`;
+            });
+            content += `\n================================================\n\n`;
+        });
+
+        // 下载文件
+        const blob = new Blob([content], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Arena_Export_${side}_${Date.now()}.md`;
+        a.click();
+        showToast(`✅ ${side === 'Left' ? '左侧' : '右侧'}数据已导出`);
+    }
+
+    function exportAllJson() {
+        const blob = new Blob([JSON.stringify(records, null, 2)], {type:'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = `Arena_Full_Backup_${Date.now()}.json`; a.click();
+    }
+
+    // --- API 总结逻辑 ---
+    async function summarizeText(uniqueId, btn) {
+        const textarea = document.getElementById(uniqueId);
+        if(!textarea.value.trim()) return alert('没内容');
+        const apiKey = document.getElementById('apiKey').value;
+        if(!apiKey) return alert('请设置 API Key');
+
+        const originBtn = btn.innerHTML;
+        btn.innerHTML = '🧠...';
+        
+        try {
+            const res = await fetch(document.getElementById('apiBase').value + '/chat/completions', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+                body: JSON.stringify({
+                    model: document.getElementById('apiModel').value,
+                    messages: [
+                        { role: "system", content: document.getElementById('systemPrompt').value },
+                        { role: "user", content: textarea.value }
+                    ],
+                    temperature: 0.3
+                })
+            });
+            const data = await res.json();
+            if(data.error) throw new Error(data.error.message);
+            
+            tempSummary = data.choices[0].message.content;
+            targetId = uniqueId;
+            targetReplaceMode = document.querySelector(`input[name="replace-${uniqueId}"]:checked`).value;
+            targetOriginal = textarea.value;
+
+            document.getElementById('previewContent').innerHTML = marked.parse(tempSummary);
+            document.getElementById('previewModal').style.display = 'flex';
+        } catch(e) { alert(e.message); } 
+        finally { btn.innerHTML = originBtn; }
+    }
+
+    function closeModal() { document.getElementById('previewModal').style.display = 'none'; }
+
+    function confirmSummary() {
+        const textarea = document.getElementById(targetId);
+        if(targetReplaceMode === 'replace') textarea.value = tempSummary;
+        else textarea.value = targetOriginal + "\n\n---\n### 🤖 AI 总结:\n" + tempSummary;
+        
+        closeModal();
+        toggleView(targetId, 'preview');
+        showToast('✅ 已更新并切换至预览视图');
+    }
+
+    // --- 动态添加轮次 ---
+    function addRound(data = null) {
+        const wrapper = document.getElementById('rounds-wrapper');
+        const idx = wrapper.children.length + 1;
+        const idA = `inputA-${Date.now()}`;
+        const idB = `inputB-${Date.now()}`;
+
+        const div = document.createElement('div');
+        div.className = 'round-container';
+        div.innerHTML = `
+            <div class="round-label">Round #${idx}</div>
+            ${idx > 1 ? '<button style="position:absolute;top:10px;right:10px;border:none;background:transparent;cursor:pointer;" onclick="this.parentElement.remove()">🗑️</button>' : ''}
+            
+            <div style="margin-bottom:15px;">
+                <label style="font-weight:bold;display:block;margin-bottom:5px;">🗣️ Prompt:</label>
+                <textarea class="textarea-full prompt-in">${data ? data.prompt : ''}</textarea>
+            </div>
+
+            <div class="grid-2-col">
+                <!-- 左边 -->
+                <div>
+                    <div class="toolbar">
+                        <label class="label-A">🔵 左边</label>
+                        <div class="toolbar-actions">
+                            <button class="btn-icon active" id="btn-edit-${idA}" onclick="toggleView('${idA}', 'edit')">✏️ 编辑</button>
+                            <button class="btn-icon" id="btn-preview-${idA}" onclick="toggleView('${idA}', 'preview')">👁️ 预览</button>
+                            <span style="width:1px;height:15px;background:#ddd;margin:0 5px;"></span>
+                            <label style="font-size:12px;"><input type="radio" name="replace-${idA}" value="replace" checked> 换</label>
+                            <label style="font-size:12px;"><input type="radio" name="replace-${idA}" value="append"> 加</label>
+                            <button class="btn-icon btn-magic" onclick="summarizeText('${idA}', this)">✨ AI 总结</button>
+                        </div>
+                    </div>
+                    <div id="wrapper-${idA}" class="input-wrapper">
+                        <textarea id="${idA}" class="textarea-half replyA-in" placeholder="Markdown 编辑模式...">${data ? data.replyA : ''}</textarea>
+                        <div id="preview-${idA}" class="preview-layer markdown-body"></div>
+                    </div>
+                </div>
+
+                <!-- 右边 -->
+                <div>
+                    <div class="toolbar">
+                        <label class="label-B">🟣 右边</label>
+                        <div class="toolbar-actions">
+                            <button class="btn-icon active" id="btn-edit-${idB}" onclick="toggleView('${idB}', 'edit')">✏️ 编辑</button>
+                            <button class="btn-icon" id="btn-preview-${idB}" onclick="toggleView('${idB}', 'preview')">👁️ 预览</button>
+                            <span style="width:1px;height:15px;background:#ddd;margin:0 5px;"></span>
+                            <label style="font-size:12px;"><input type="radio" name="replace-${idB}" value="replace" checked> 换</label>
+                            <label style="font-size:12px;"><input type="radio" name="replace-${idB}" value="append"> 加</label>
+                            <button class="btn-icon btn-magic" onclick="summarizeText('${idB}', this)">✨ AI 总结</button>
+                        </div>
+                    </div>
+                    <div id="wrapper-${idB}" class="input-wrapper">
+                        <textarea id="${idB}" class="textarea-half replyB-in" placeholder="Markdown 编辑模式...">${data ? data.replyB : ''}</textarea>
+                        <div id="preview-${idB}" class="preview-layer markdown-body"></div>
+                    </div>
+                </div>
+            </div>
+        `;
+        wrapper.appendChild(div);
+        updateLabels();
+    }
+
+    // --- 基础逻辑 ---
+    function saveApiConfig() {
+        localStorage.setItem('arenaApiConfigV11', JSON.stringify({
+            base: document.getElementById('apiBase').value,
+            key: document.getElementById('apiKey').value,
+            model: document.getElementById('apiModel').value,
+            prompt: document.getElementById('systemPrompt').value
+        }));
+        showToast('✅ API 配置已保存');
+    }
+
+    function loadApiConfig() {
+        const c = JSON.parse(localStorage.getItem('arenaApiConfigV11'));
+        if(c) {
+            document.getElementById('apiBase').value = c.base;
+            document.getElementById('apiKey').value = c.key;
+            document.getElementById('apiModel').value = c.model;
+            if(c.prompt) document.getElementById('systemPrompt').value = c.prompt;
+        }
+    }
+
+    document.getElementById('nameA').addEventListener('input', updateLabels);
+    document.getElementById('nameB').addEventListener('input', updateLabels);
+    function updateLabels() {
+        const nA = document.getElementById('nameA').value;
+        const nB = document.getElementById('nameB').value;
+        document.querySelectorAll('.label-A').forEach(el => el.textContent = '🔵 ' + nA);
+        document.querySelectorAll('.label-B').forEach(el => el.textContent = '🟣 ' + nB);
+    }
+
+    function saveRecord() {
+        const turns = [];
+        document.querySelectorAll('.round-container').forEach((div, idx) => {
+            turns.push({
+                round: idx+1,
+                prompt: div.querySelector('.prompt-in').value,
+                replyA: div.querySelector('.replyA-in').value,
+                replyB: div.querySelector('.replyB-in').value
+            });
+        });
+        if(!turns[0].prompt && !turns[0].replyA) return;
+
+        const rec = {
+            id: document.getElementById('edit-id').value || Date.now(),
+            time: new Date().toLocaleString(),
+            nameA: document.getElementById('nameA').value,
+            nameB: document.getElementById('nameB').value,
+            winner: document.querySelector('input[name="winner"]:checked').value,
+            turns
+        };
+
+        const existingIdx = records.findIndex(r => r.id == rec.id);
+        if(existingIdx !== -1) records[existingIdx] = rec;
+        else records.unshift(rec);
+
+        localStorage.setItem('arenaRecordsV11', JSON.stringify(records));
+        renderRecords();
+        resetForm();
+        showToast('✅ 已保存');
+    }
+
+    function renderRecords() {
+        const list = document.getElementById('record-list');
+        document.getElementById('count').textContent = records.length;
+        list.innerHTML = '';
+        records.forEach((r, index) => {
+            let h = '';
+            r.turns.forEach(t => {
+                h += `<div style="margin-bottom:20px;border-bottom:1px dashed #eee;padding-bottom:10px;">
+                    <div style="background:#e3f2fd;padding:10px;border-radius:5px;margin-bottom:10px;"><strong>User:</strong> ${marked.parse(t.prompt)}</div>
+                    <div class="grid-2-col">
+                        <div class="markdown-body"><strong>${r.nameA}:</strong> ${marked.parse(t.replyA||'')}</div>
+                        <div class="markdown-body"><strong>${r.nameB}:</strong> ${marked.parse(t.replyB||'')}</div>
+                    </div>
+                </div>`;
+            });
+            const d = document.createElement('div');
+            d.className = `record-item win-${r.winner}`;
+            d.innerHTML = `<div class="record-header" onclick="this.nextElementSibling.classList.toggle('show')"><div>${r.time} | ${r.nameA} vs ${r.nameB}</div><small>▼</small></div><div class="chat-flow">${h}<div style="text-align:right;"><button class="btn" style="background:#eee;" onclick="editRecord(${r.id})">✏️</button> <button class="btn" style="background:#faa;" onclick="delRecord(${index})">🗑️</button></div></div>`;
+            list.appendChild(d);
+        });
+    }
+
+    function editRecord(id) {
+        const r = records.find(i => i.id === id);
+        if(!r) return;
+        document.getElementById('edit-id').value = r.id;
+        document.getElementById('nameA').value = r.nameA;
+        document.getElementById('nameB').value = r.nameB;
+        updateLabels();
+        document.getElementById('rounds-wrapper').innerHTML = '';
+        r.turns.forEach(t => addRound(t));
+        window.scrollTo({top:0, behavior:'smooth'});
+    }
+
+    function resetForm() {
+        document.getElementById('edit-id').value = '';
+        document.getElementById('rounds-wrapper').innerHTML = '';
+        addRound();
+    }
+    function delRecord(i) { records.splice(i, 1); localStorage.setItem('arenaRecordsV11', JSON.stringify(records)); renderRecords(); }
+    function showToast(m) { const e=document.getElementById('status'); e.textContent=m; e.style.display='block'; setTimeout(()=>e.style.display='none',2000); }
+</script>
+
+</body>
+</html>
