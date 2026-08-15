@@ -16,8 +16,10 @@
 商业产品、闭源 SaaS、商业桌面软件、云 API 与订阅型创作服务单独放在 [`research/commercial_tools/`](research/commercial_tools/)：
 
 - [商业工具目录说明与交接边界](research/commercial_tools/README.md)
+- [138 项商业 AI 创作工具调研对比](research/commercial_tools/商业AI创作工具调研对比_2026-08-15.md)
+- [商业工具与开源 83 项对照（不改开源库存）](research/commercial_tools/商业工具与开源83项对照_2026-08-15.md)
 - [138 项商业 AI 创作工具 CSV](research/commercial_tools/商业工具明细_2026-08-15.csv)
 - [CSV 源数据 JSON](research/commercial_tools/商业工具目录源数据_2026-08-15.json)
 - [生成与隔离校验脚本](research/commercial_tools/generate_commercial_tools_csv.py)
 
-> 商业目录与 83 项 GitHub 开源库存**完全分层**。生成脚本只读取原有 83 项 CSV 做名称/URL 隔离校验，不会合并、追加或重写原有库存。
+> 商业目录与 83 项 GitHub 开源库存**完全分层**。生成脚本只读取原有 83 项 CSV 做名称/URL 隔离校验，不会合并、追加或重写原有库存。调研对比和对照文档也只引用 83 项，不改其数量、排序或验证结论。
