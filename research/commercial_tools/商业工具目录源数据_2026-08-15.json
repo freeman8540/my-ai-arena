@@ -1,0 +1,1113 @@
+{
+  "snapshot_date": "2026-08-15",
+  "title": "商业 AI 创作工具目录（独立于 GitHub 开源 83 项库存）",
+  "scope": "商业产品、闭源 SaaS、商业桌面软件、云 API 与订阅型创作服务；不把 GitHub 开源仓库清单复制或追加到本目录。",
+  "catalog_count": 138,
+  "source_policy": "每条记录保留官方产品页；功能和计费只作为目录快照，不替代当前服务条款、输出权利、模型权重、素材与数据处理协议的法律核查。",
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "provider": "OpenAI",
+      "url": "https://chatgpt.com/",
+      "focus": "对话、长文起草、改写、文件与多模态创作",
+      "commercial_model": "免费层 + 订阅 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Claude",
+      "provider": "Anthropic",
+      "url": "https://claude.ai/",
+      "focus": "长文分析、结构化写作、改写与项目知识库",
+      "commercial_model": "免费层 + 订阅 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Gemini",
+      "provider": "Google",
+      "url": "https://gemini.google.com/",
+      "focus": "多模态问答、长上下文写作与研究辅助",
+      "commercial_model": "免费层 + Google AI 订阅 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Grok",
+      "provider": "xAI",
+      "url": "https://grok.com/",
+      "focus": "实时检索、脑暴、对话和创意文本生成",
+      "commercial_model": "订阅 + API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "provider": "Microsoft",
+      "url": "https://copilot.microsoft.com/",
+      "focus": "对话、网页研究、Office 内容起草与改写",
+      "commercial_model": "免费层 + Microsoft 365 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Perplexity",
+      "provider": "Perplexity AI",
+      "url": "https://www.perplexity.ai/",
+      "focus": "带来源的检索、研究摘要和内容草拟",
+      "commercial_model": "免费层 + Pro / 企业订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Poe",
+      "provider": "Quora",
+      "url": "https://poe.com/",
+      "focus": "多模型对话、Bot 编排与创意写作",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Le Chat",
+      "provider": "Mistral AI",
+      "url": "https://chat.mistral.ai/",
+      "focus": "对话、写作、文件分析和工作流辅助",
+      "commercial_model": "免费层 + Pro / 企业方案",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "DeepSeek",
+      "provider": "DeepSeek",
+      "url": "https://www.deepseek.com/",
+      "focus": "中文对话、推理、长文整理和代码辅助",
+      "commercial_model": "免费服务 + API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Kimi",
+      "provider": "月之暗面",
+      "url": "https://kimi.moonshot.cn/",
+      "focus": "中文长文阅读、检索、写作和表格处理",
+      "commercial_model": "免费层 + 会员 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "豆包",
+      "provider": "字节跳动",
+      "url": "https://www.doubao.com/",
+      "focus": "中文对话、写作、搜索、图片和视频创作入口",
+      "commercial_model": "免费服务 + 增值功能 / API",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "通义千问",
+      "provider": "阿里云",
+      "url": "https://tongyi.aliyun.com/",
+      "focus": "中文对话、长文、文生图和企业模型服务",
+      "commercial_model": "免费层 + 会员 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "文心",
+      "provider": "百度",
+      "url": "https://yiyan.baidu.com/",
+      "focus": "中文问答、内容生成、搜索和企业智能体入口",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "智谱清言",
+      "provider": "智谱 AI",
+      "url": "https://chatglm.cn/",
+      "focus": "中文对话、长文创作、智能体和知识问答",
+      "commercial_model": "免费层 + 会员 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "讯飞星火",
+      "provider": "科大讯飞",
+      "url": "https://xinghuo.xfyun.cn/",
+      "focus": "中文写作、学习、语音与办公问答",
+      "commercial_model": "免费层 + 会员 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "腾讯元宝",
+      "provider": "腾讯",
+      "url": "https://yuanbao.tencent.com/",
+      "focus": "中文搜索、文件阅读、总结和内容创作",
+      "commercial_model": "免费服务 + 企业服务",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "MiniMax",
+      "provider": "MiniMax",
+      "url": "https://www.minimaxi.com/",
+      "focus": "文本、角色对话、图像、视频和语音创作",
+      "commercial_model": "免费层 + 订阅 / API 按量",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Character.AI",
+      "provider": "Character Technologies",
+      "url": "https://character.ai/",
+      "focus": "角色扮演、人物对话和互动故事",
+      "commercial_model": "免费层 + c.ai+ 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "NovelAI",
+      "provider": "Anlatan",
+      "url": "https://novelai.net/",
+      "focus": "小说续写、Lorebook、二次元图像与故事创作",
+      "commercial_model": "订阅 + 点数",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Sudowrite",
+      "provider": "Sudowrite",
+      "url": "https://www.sudowrite.com/",
+      "focus": "小说脑暴、场景生成、改写和 Story Bible",
+      "commercial_model": "试用 + 订阅 / 点数",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Dreamily",
+      "provider": "Dreamily",
+      "url": "https://dreamily.ai/",
+      "focus": "中文/英文故事续写、角色和世界观辅助",
+      "commercial_model": "免费层 + 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Jasper",
+      "provider": "Jasper AI",
+      "url": "https://www.jasper.ai/",
+      "focus": "品牌语气、营销文案、博客和活动内容生成",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Copy.ai",
+      "provider": "Copy.ai",
+      "url": "https://www.copy.ai/",
+      "focus": "营销文案、销售工作流和品牌内容生成",
+      "commercial_model": "免费层 + 订阅 / 企业方案",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Writesonic",
+      "provider": "Writesonic",
+      "url": "https://writesonic.com/",
+      "focus": "文章、SEO、品牌内容和 AI 搜索优化",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Rytr",
+      "provider": "Rytr",
+      "url": "https://rytr.me/",
+      "focus": "短文案、邮件、博客和改写",
+      "commercial_model": "免费层 + 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Anyword",
+      "provider": "Anyword",
+      "url": "https://www.anyword.com/",
+      "focus": "营销文案、品牌语气和转化预测",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "HyperWrite",
+      "provider": "OthersideAI",
+      "url": "https://www.hyperwriteai.com/",
+      "focus": "写作代理、研究、邮件和文档起草",
+      "commercial_model": "免费层 + 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Grammarly",
+      "provider": "Grammarly",
+      "url": "https://www.grammarly.com/",
+      "focus": "语法、风格、重写、语气和生成式写作辅助",
+      "commercial_model": "免费层 + Premium / Business",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "QuillBot",
+      "provider": "Learneo",
+      "url": "https://quillbot.com/",
+      "focus": "改写、总结、翻译、语法检查和引文辅助",
+      "commercial_model": "免费层 + Premium",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "Wordtune",
+      "provider": "AI21 Labs",
+      "url": "https://www.wordtune.com/",
+      "focus": "句子重写、语气调整、总结和改写",
+      "commercial_model": "免费层 + 订阅",
+      "category": "通用模型与写作助手"
+    },
+    {
+      "name": "蛙蛙写作",
+      "provider": "杭州引力智航",
+      "url": "https://wawawriter.com/",
+      "focus": "小说、剧本、漫剧和通用内容的全链路 Agent 创作",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "秘塔写作猫",
+      "provider": "秘塔科技",
+      "url": "https://xiezuocat.com/",
+      "focus": "中文纠错、润色、改写和长文写作辅助",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "火山写作",
+      "provider": "字节跳动",
+      "url": "https://www.writingo.net/",
+      "focus": "中英文纠错、润色、改写和翻译",
+      "commercial_model": "免费服务 + 企业服务",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "百度橙篇",
+      "provider": "百度",
+      "url": "https://cp.baidu.com/",
+      "focus": "长文生成、资料检索、总结和知识内容创作",
+      "commercial_model": "免费服务 + 增值功能",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "讯飞智文",
+      "provider": "科大讯飞",
+      "url": "https://zhiwen.iflyrec.com/",
+      "focus": "长文档、报告、演示和结构化文稿生成",
+      "commercial_model": "免费层 + 会员 / 企业方案",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "笔灵 AI",
+      "provider": "笔灵",
+      "url": "https://ibiling.cn/",
+      "focus": "论文、公文、商业计划书和内容改写辅助",
+      "commercial_model": "免费层 + 会员 / 点数",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Novelcrafter",
+      "provider": "Novelcrafter",
+      "url": "https://novelcrafter.com/",
+      "focus": "长篇小说规划、章节编辑、Codex 和多模型接入",
+      "commercial_model": "订阅；模型调用另计",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Plottr",
+      "provider": "CorkTree Creative",
+      "url": "https://plottr.com/",
+      "focus": "情节卡片、时间线、角色和系列规划",
+      "commercial_model": "试用 + 桌面 / 订阅许可",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Campfire Writing",
+      "provider": "Campfire Technology",
+      "url": "https://www.campfirewriting.com/",
+      "focus": "世界观、角色、时间线、地图和长篇项目管理",
+      "commercial_model": "模块化订阅 / 买断模块",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Scrivener",
+      "provider": "Literature & Latte",
+      "url": "https://www.literatureandlatte.com/scrivener/overview",
+      "focus": "长篇写作、资料卡片、章节组织和多格式导出",
+      "commercial_model": "一次性桌面许可",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Final Draft",
+      "provider": "Final Draft",
+      "url": "https://www.finaldraft.com/",
+      "focus": "行业格式剧本、协作、模板和编剧辅助",
+      "commercial_model": "一次性许可 + 可选订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Celtx",
+      "provider": "Celtx",
+      "url": "https://www.celtx.com/",
+      "focus": "剧本、分镜、预算、排期和前期制作协作",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Arc Studio",
+      "provider": "Arc Studio",
+      "url": "https://www.arcstudiopro.com/",
+      "focus": "云端剧本写作、版本、协作和格式化",
+      "commercial_model": "免费层 + Pro / 团队订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "WriterDuet",
+      "provider": "WriterDuet",
+      "url": "https://writerduet.com/",
+      "focus": "实时协作剧本、版本控制和跨格式导入导出",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Fade In",
+      "provider": "Kent Tessman",
+      "url": "https://www.fadeinpro.com/",
+      "focus": "专业剧本编辑、排版、修订和制作格式导出",
+      "commercial_model": "一次性桌面许可",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Highland 2",
+      "provider": "Quote-Unquote Apps",
+      "url": "https://highland2.app/",
+      "focus": "Mac 剧本/小说写作、自动排版和 Fountain 工作流",
+      "commercial_model": "一次性许可 + 可选升级",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Filmustage",
+      "provider": "Filmustage",
+      "url": "https://filmustage.com/",
+      "focus": "剧本拆解、场景分析、拍摄计划和预算估算",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "StudioBinder",
+      "provider": "StudioBinder",
+      "url": "https://www.studiobinder.com/",
+      "focus": "剧本拆解、分镜、拍摄表、通告单和制作协作",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Boords",
+      "provider": "Boords",
+      "url": "https://boords.com/",
+      "focus": "脚本转分镜、AI 图像、动画预览和团队审阅",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "StoryboardHero",
+      "provider": "StoryboardHero",
+      "url": "https://storyboardhero.ai/",
+      "focus": "脚本转分镜、角色一致性和客户提案",
+      "commercial_model": "订阅 / 团队方案",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Katalist",
+      "provider": "Katalist",
+      "url": "https://www.katalist.ai/",
+      "focus": "文本到视觉故事板、镜头规划和创意迭代",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "LTX Studio",
+      "provider": "Lightricks",
+      "url": "https://ltx.studio/",
+      "focus": "脚本到场景、镜头、故事板和视频预演",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Storyist",
+      "provider": "Storyist Software",
+      "url": "https://storyist.com/",
+      "focus": "小说与剧本写作、项目资料和章节组织",
+      "commercial_model": "一次性许可 / 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Dramatify",
+      "provider": "Dramatify",
+      "url": "https://dramatify.com/",
+      "focus": "剧本、角色、制作计划和影视项目管理",
+      "commercial_model": "订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Milanote",
+      "provider": "Milanote",
+      "url": "https://milanote.com/",
+      "focus": "灵感板、故事结构、素材和团队协作",
+      "commercial_model": "免费层 + Pro / 团队订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "FinalBit",
+      "provider": "FinalBit",
+      "url": "https://www.finalbitai.com/",
+      "focus": "AI 剧本、coverage、预算、排期、分镜和前期制作",
+      "commercial_model": "免费层 + Pro / 企业方案",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Squibler",
+      "provider": "Squibler",
+      "url": "https://www.squibler.io/",
+      "focus": "长篇小说、剧本、场景和 AI 编辑器",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Plot Factory",
+      "provider": "Plot Factory",
+      "url": "https://www.plotfactory.com/",
+      "focus": "小说大纲、角色、世界观和在线写作",
+      "commercial_model": "免费层 + 订阅",
+      "category": "小说、剧本与故事工作台"
+    },
+    {
+      "name": "Sora",
+      "provider": "OpenAI",
+      "url": "https://sora.com/",
+      "focus": "文本/图像生成视频、重混、延展和故事板",
+      "commercial_model": "订阅 / 使用额度",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Runway",
+      "provider": "Runway AI",
+      "url": "https://runwayml.com/",
+      "focus": "文生视频、图生视频、编辑、抠像和视觉特效",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Luma Dream Machine",
+      "provider": "Luma AI",
+      "url": "https://lumalabs.ai/dream-machine",
+      "focus": "文本/图像生成视频、镜头延展和创意迭代",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Pika",
+      "provider": "Pika Labs",
+      "url": "https://pika.art/",
+      "focus": "短视频生成、特效、图像动画和社交内容",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Kling AI",
+      "provider": "快手",
+      "url": "https://klingai.com/",
+      "focus": "文生视频、图生视频、运动控制和角色一致性",
+      "commercial_model": "免费层 + 会员 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Hailuo AI",
+      "provider": "MiniMax",
+      "url": "https://hailuoai.video/",
+      "focus": "文本/图像生成视频、角色与短片创作",
+      "commercial_model": "免费层 + 点数 / 会员",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Vidu",
+      "provider": "生数科技",
+      "url": "https://www.vidu.com/",
+      "focus": "文本/图像生成视频、参考生视频和短镜头创作",
+      "commercial_model": "免费层 + 点数 / API",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Google Flow",
+      "provider": "Google",
+      "url": "https://labs.google/flow/about",
+      "focus": "故事板式视频创作、场景组织和生成式镜头",
+      "commercial_model": "订阅 / 使用额度",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Adobe Firefly Video",
+      "provider": "Adobe",
+      "url": "https://www.adobe.com/products/firefly/features/ai-video-generator.html",
+      "focus": "文本/图像生视频、镜头控制和 Creative Cloud 工作流",
+      "commercial_model": "免费额度 + 订阅 / 企业方案",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "PixVerse",
+      "provider": "PixVerse",
+      "url": "https://pixverse.ai/",
+      "focus": "文生视频、图生视频、特效和模板化创作",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Haiper",
+      "provider": "Haiper AI",
+      "url": "https://haiper.ai/",
+      "focus": "文本/图像生成短视频和视频重绘",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Genmo",
+      "provider": "Genmo",
+      "url": "https://www.genmo.ai/",
+      "focus": "文本到视频、动画和创意视频实验",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Kaiber",
+      "provider": "Kaiber AI",
+      "url": "https://www.kaiber.ai/",
+      "focus": "图像动画、音乐视频和风格化视频",
+      "commercial_model": "试用 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "InVideo AI",
+      "provider": "InVideo",
+      "url": "https://invideo.io/ai/",
+      "focus": "提示词到脚本、素材、旁白、字幕和成片",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "VEED",
+      "provider": "VEED.IO",
+      "url": "https://www.veed.io/",
+      "focus": "浏览器剪辑、字幕、配音、脚本和社交视频",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Kapwing",
+      "provider": "Kapwing",
+      "url": "https://www.kapwing.com/",
+      "focus": "协作剪辑、脚本、字幕、素材和社交视频",
+      "commercial_model": "免费层 + Pro / 团队订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Descript",
+      "provider": "Descript",
+      "url": "https://www.descript.com/",
+      "focus": "转录驱动剪辑、脚本、配音和屏幕录制",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "OpusClip",
+      "provider": "OpusClip",
+      "url": "https://www.opus.pro/",
+      "focus": "长视频智能拆条、字幕、布局和社交发布",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Captions",
+      "provider": "Captions",
+      "url": "https://www.captions.ai/",
+      "focus": "数字人、自动字幕、配音和移动端短视频制作",
+      "commercial_model": "订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Wisecut",
+      "provider": "Wisecut",
+      "url": "https://www.wisecut.video/",
+      "focus": "自动剪辑、跳剪、字幕、配乐和短视频输出",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Pictory",
+      "provider": "Pictory",
+      "url": "https://pictory.ai/",
+      "focus": "文字/文章转视频、摘要、素材、配音和字幕",
+      "commercial_model": "试用 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Fliki",
+      "provider": "Fliki",
+      "url": "https://fliki.ai/",
+      "focus": "文字转视频、AI 配音、素材和社交视频",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Steve AI",
+      "provider": "Steve AI",
+      "url": "https://www.steve.ai/",
+      "focus": "脚本转动画/真人素材视频、配音和模板编辑",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Raw Shorts",
+      "provider": "Raw Shorts",
+      "url": "https://www.rawshorts.com/",
+      "focus": "文字转解释视频、动画场景和模板制作",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Canva Video",
+      "provider": "Canva",
+      "url": "https://www.canva.com/video-editor/",
+      "focus": "模板化剪辑、脚本辅助、字幕和社交视频设计",
+      "commercial_model": "免费层 + Pro / 团队订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Adobe Express",
+      "provider": "Adobe",
+      "url": "https://www.adobe.com/express/feature/video/",
+      "focus": "快速剪辑、模板、字幕、社交视频和品牌资产",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "剪映",
+      "provider": "字节跳动",
+      "url": "https://www.capcut.cn/",
+      "focus": "移动/桌面剪辑、自动字幕、配音、特效和模板",
+      "commercial_model": "免费层 + 增值订阅 / 素材",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Clipchamp",
+      "provider": "Microsoft",
+      "url": "https://clipchamp.com/",
+      "focus": "浏览器剪辑、模板、录屏、字幕和素材库",
+      "commercial_model": "免费层 + Microsoft 365 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Filmora",
+      "provider": "万兴科技",
+      "url": "https://filmora.wondershare.com/",
+      "focus": "桌面剪辑、AI 文案、字幕、补帧和生成式工具",
+      "commercial_model": "订阅 / 一次性许可",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Wondershare Virbo",
+      "provider": "万兴科技",
+      "url": "https://virbo.wondershare.com/",
+      "focus": "数字人、文本转视频、多语配音和营销视频",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "FlexClip",
+      "provider": "FlexClip",
+      "url": "https://www.flexclip.com/",
+      "focus": "在线剪辑、模板、文字转视频和字幕",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Renderforest",
+      "provider": "Renderforest",
+      "url": "https://www.renderforest.com/",
+      "focus": "模板视频、动画、Logo、宣传片和网站素材",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Animoto",
+      "provider": "Animoto",
+      "url": "https://animoto.com/",
+      "focus": "照片/视频转营销短片、模板和品牌视频",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Biteable",
+      "provider": "Biteable",
+      "url": "https://biteable.com/",
+      "focus": "动画、营销视频、模板和团队协作",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Typeframes",
+      "provider": "Typeframes",
+      "url": "https://www.typeframes.com/",
+      "focus": "文字动画、产品宣传和社交视频",
+      "commercial_model": "免费层 + 订阅",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "HeyGen",
+      "provider": "HeyGen",
+      "url": "https://www.heygen.com/",
+      "focus": "数字人、口播视频、翻译和声音克隆",
+      "commercial_model": "免费层 + 订阅 / 企业方案",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Synthesia",
+      "provider": "Synthesia",
+      "url": "https://www.synthesia.io/",
+      "focus": "企业数字人培训、演示、翻译和品牌视频",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "D-ID",
+      "provider": "D-ID",
+      "url": "https://www.d-id.com/",
+      "focus": "照片说话、数字人视频和 API",
+      "commercial_model": "试用 + 订阅 / API 按量",
+      "category": "视频生成与剪辑"
+    },
+    {
+      "name": "Midjourney",
+      "provider": "Midjourney",
+      "url": "https://www.midjourney.com/",
+      "focus": "文本生成图像、风格探索和角色/场景概念",
+      "commercial_model": "订阅",
+      "category": "图像与设计"
+    },
+    {
+      "name": "DALL·E",
+      "provider": "OpenAI",
+      "url": "https://openai.com/index/dall-e-3/",
+      "focus": "文本生成图像、编辑和创意概念图",
+      "commercial_model": "通过 ChatGPT 订阅 / API 按量",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Ideogram",
+      "provider": "Ideogram",
+      "url": "https://ideogram.ai/",
+      "focus": "文字排版、海报、Logo 和图像生成",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Leonardo.Ai",
+      "provider": "Leonardo.Ai",
+      "url": "https://leonardo.ai/",
+      "focus": "图像生成、画布编辑、资产和风格模型",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Adobe Firefly",
+      "provider": "Adobe",
+      "url": "https://firefly.adobe.com/",
+      "focus": "图像生成、填充、风格化和 Creative Cloud 协作",
+      "commercial_model": "免费额度 + 订阅 / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Krea",
+      "provider": "Krea AI",
+      "url": "https://www.krea.ai/",
+      "focus": "实时生成、图像放大、视频和创意画布",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Playground",
+      "provider": "Playground AI",
+      "url": "https://playground.com/",
+      "focus": "图像生成、设计编辑和社交素材",
+      "commercial_model": "免费层 + 订阅",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Recraft",
+      "provider": "Recraft",
+      "url": "https://www.recraft.ai/",
+      "focus": "品牌图形、矢量、Logo、图标和图像生成",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Freepik AI",
+      "provider": "Freepik",
+      "url": "https://www.freepik.com/ai",
+      "focus": "图像生成、放大、背景和设计素材",
+      "commercial_model": "免费层 + Premium / 点数",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Magnific AI",
+      "provider": "Magnific",
+      "url": "https://magnific.ai/",
+      "focus": "图像超分、细节重建和创意放大",
+      "commercial_model": "订阅 / 点数",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Topaz Photo AI",
+      "provider": "Topaz Labs",
+      "url": "https://www.topazlabs.com/topaz-photo-ai",
+      "focus": "桌面图像降噪、放大、锐化和修复",
+      "commercial_model": "一次性许可 / 升级服务",
+      "category": "图像与设计"
+    },
+    {
+      "name": "PhotoRoom",
+      "provider": "PhotoRoom",
+      "url": "https://www.photoroom.com/",
+      "focus": "商品抠图、背景生成、批量电商图和品牌模板",
+      "commercial_model": "免费层 + Pro / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Clipdrop",
+      "provider": "Jasper",
+      "url": "https://clipdrop.co/",
+      "focus": "抠图、清理、扩图、光照和图像增强",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Pebblely",
+      "provider": "Pebblely",
+      "url": "https://pebblely.com/",
+      "focus": "商品图背景、场景和电商视觉生成",
+      "commercial_model": "免费层 + 订阅",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Flair AI",
+      "provider": "Flair AI",
+      "url": "https://flair.ai/",
+      "focus": "商品摄影、品牌场景和营销视觉",
+      "commercial_model": "试用 + 订阅 / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Booth AI",
+      "provider": "Booth AI",
+      "url": "https://booth.ai/",
+      "focus": "商品图、广告概念和 AI 商业摄影",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Mokker AI",
+      "provider": "Mokker",
+      "url": "https://mokker.ai/",
+      "focus": "商品背景、场景替换和电商图批量制作",
+      "commercial_model": "免费层 + 订阅",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Fotor",
+      "provider": "Fotor",
+      "url": "https://www.fotor.com/",
+      "focus": "在线修图、设计模板、生成式图像和增强",
+      "commercial_model": "免费层 + Pro / 点数",
+      "category": "图像与设计"
+    },
+    {
+      "name": "Picsart",
+      "provider": "Picsart",
+      "url": "https://picsart.com/",
+      "focus": "移动/网页编辑、生成式图像、模板和社交设计",
+      "commercial_model": "免费层 + Gold / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "美图设计室",
+      "provider": "美图",
+      "url": "https://www.design.meitu.com/",
+      "focus": "电商海报、商品图、抠图和营销设计",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "图像与设计"
+    },
+    {
+      "name": "稿定设计",
+      "provider": "稿定",
+      "url": "https://www.gaoding.com/",
+      "focus": "模板设计、抠图、文案和电商视觉",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "图像与设计"
+    },
+    {
+      "name": "创客贴",
+      "provider": "创客贴",
+      "url": "https://www.chuangkit.com/",
+      "focus": "海报、演示、社媒和品牌模板设计",
+      "commercial_model": "免费层 + 会员 / 企业方案",
+      "category": "图像与设计"
+    },
+    {
+      "name": "ElevenLabs",
+      "provider": "ElevenLabs",
+      "url": "https://elevenlabs.io/",
+      "focus": "多语言 TTS、声音克隆、配音和语音 API",
+      "commercial_model": "免费层 + 订阅 / API 按量",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "PlayHT",
+      "provider": "PlayHT",
+      "url": "https://play.ht/",
+      "focus": "AI 配音、语音克隆、实时语音和 API",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Murf AI",
+      "provider": "Murf",
+      "url": "https://murf.ai/",
+      "focus": "企业旁白、配音、语气控制和工作室编辑",
+      "commercial_model": "试用 + 订阅 / 企业方案",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "WellSaid Labs",
+      "provider": "WellSaid Labs",
+      "url": "https://www.wellsaidlabs.com/",
+      "focus": "企业级旁白、品牌声音和团队审核",
+      "commercial_model": "订阅 / 企业方案",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "LOVO AI",
+      "provider": "LOVO",
+      "url": "https://lovo.ai/",
+      "focus": "多语言配音、声音克隆、视频旁白和音频编辑",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Speechify",
+      "provider": "Speechify",
+      "url": "https://speechify.com/",
+      "focus": "文本转语音、阅读、配音和语音生成",
+      "commercial_model": "免费层 + Premium / 企业服务",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Resemble AI",
+      "provider": "Resemble AI",
+      "url": "https://www.resemble.ai/",
+      "focus": "声音克隆、语音转换、检测和 API",
+      "commercial_model": "订阅 / API 按量 / 企业方案",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Voice.ai",
+      "provider": "Voice.ai",
+      "url": "https://voice.ai/",
+      "focus": "实时变声、声音社区和游戏/直播音频",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Listnr",
+      "provider": "Listnr",
+      "url": "https://listnr.ai/",
+      "focus": "播客与视频配音、TTS 和音频导出",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Typecast",
+      "provider": "Neosapience",
+      "url": "https://typecast.ai/",
+      "focus": "AI 角色、数字人、配音和情绪控制",
+      "commercial_model": "免费层 + 订阅 / 企业方案",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Fish Audio",
+      "provider": "Fish Audio",
+      "url": "https://fish.audio/",
+      "focus": "多语言语音生成、声音克隆和 API",
+      "commercial_model": "免费层 + 订阅 / API 按量",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "讯飞智作",
+      "provider": "科大讯飞",
+      "url": "https://peiyin.xunfei.cn/",
+      "focus": "中文配音、方言、情绪语音和有声内容",
+      "commercial_model": "免费层 + 会员 / 企业服务",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "火山引擎语音",
+      "provider": "火山引擎",
+      "url": "https://www.volcengine.com/product/voice-tech",
+      "focus": "TTS、语音识别、声音复刻和企业 API",
+      "commercial_model": "API 按量 / 企业方案",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Azure AI Speech",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/ai-services/ai-speech",
+      "focus": "神经 TTS、语音识别、翻译和自定义声音",
+      "commercial_model": "云服务按量 / 企业协议",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Google Cloud Text-to-Speech",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/text-to-speech",
+      "focus": "多语言 TTS、神经声音和企业 API",
+      "commercial_model": "云服务按量 / 企业协议",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Amazon Polly",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/polly/",
+      "focus": "神经 TTS、SSML 和语音 API",
+      "commercial_model": "云服务按量 / 企业协议",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Suno",
+      "provider": "Suno",
+      "url": "https://suno.com/",
+      "focus": "文本生成歌曲、歌词、编曲和音乐片段",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Udio",
+      "provider": "Udio",
+      "url": "https://www.udio.com/",
+      "focus": "文本生成歌曲、延展、混音和音乐创作",
+      "commercial_model": "免费层 + 订阅 / 点数",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Stable Audio",
+      "provider": "Stability AI",
+      "url": "https://www.stableaudio.com/",
+      "focus": "文本生成音乐、音效和音频片段",
+      "commercial_model": "免费层 + 订阅 / API",
+      "category": "语音、音乐与音频"
+    },
+    {
+      "name": "Soundraw",
+      "provider": "Soundraw",
+      "url": "https://soundraw.io/",
+      "focus": "AI 背景音乐、情绪/长度编辑和授权下载",
+      "commercial_model": "订阅 / 商业授权按计划",
+      "category": "语音、音乐与音频"
+    }
+  ]
+}
